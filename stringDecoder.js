@@ -1,13 +1,12 @@
 function decoder(code){
-    let codeArr = code.split('');
     let uncoded = [];
     let i = 0;
-    while(i < codeArr.length){
-        if(!isNaN(codeArr[i])){
+    while(i < code.length){
+        if(!isNaN(code[i])){
             // console.log(Number(codeArr[i]));
-            i += Number(codeArr[i]) + 1;
+            i += Number(code[i]) + 1;
         } else {
-            uncoded.push(codeArr[i]);
+            uncoded.push(code[i]);
             i++;
         }
     }
